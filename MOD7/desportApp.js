@@ -19,8 +19,10 @@ class Marcacao {
 
 
 function inicializar() {
-    let marcacao1 = new Marcacao("1", "12h00", "João", "Passadeira");
+    let marcacao1 = new Marcacao("1", "12h00", "João", "Pesos");
     marcacoes[0] = marcacao1;
+    let marcacao2 = new Marcacao("1", "12h00", "Maria", "Passadeira");
+    marcacoes[1] = marcacao2;
 }
 
 function imprimir() {
@@ -41,9 +43,10 @@ function clearList() {
     }
 }
 
-function createSessionElement(session) {
+function createSessionElement(marcacao) {
     const li = document.createElement("li");
-    li.textContent = "dia" + session.dia;
+    // Parei aqui
+    li.textContent = "Dia: " + marcacao.dia + "Hora: " + marcacao.hora;
     return li;
 };
 
