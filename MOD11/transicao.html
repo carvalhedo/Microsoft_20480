@@ -12,24 +12,12 @@
         }
         */
 
-        @keyframes solmovimento {
+        @keyframes ballmovement {
 
             0% {
                 left: 0px;
                 top: 0px;
                 background-color: yellow;
-            }
-
-            33% {
-                left: 100px;
-                top: 160px;
-                background-color: orange;
-            }
-    
-            66% {
-                left: 200px;
-                top: 0px;
-                background-color: red;
             }
 
             100% {
@@ -40,7 +28,8 @@
         }
 
         #sol.baixar {
-            animation-name: solmovimento;
+            animation-name: ballmovement;
+            animation-play-state: running;
             animation-duration: 5s;
             animation-delay: 3s;
             animation-timing-function: linear;
@@ -54,6 +43,14 @@
 
         // Declare global variables.
         var sol, button;
+
+
+        // Page initialization - handle ball animation events.
+        function init() {
+            sol = document.getElementById("sol");
+            button = document.getElementById("button");
+
+        }
 
 
         // Start the ball animation.
